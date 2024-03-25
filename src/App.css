@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+
+}
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.AdditiveSettings{
+  width: auto;
+}
+.salesGrid{
+  display:grid;
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr;
+  border: 2px solid black;
+  width:400px;
+  height: 50px;
+  overflow-x:visible;
+}
+.salesInput{
+  width: 50px;
+}
+.salesCol{
+  width:50px;
+  height: 30px;
+}
+.itemName{
+  font-size: 8pt;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.salerName{
+  position:sticky;
+  font-size: 14pt;
+  left:0;
+  z-index:999;
+  background:grey;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
