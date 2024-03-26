@@ -3,7 +3,6 @@ import AdditiveSettingsRender from "./AdditiveSettings";
 
 import targetFile from "./dest.xlsx"
 const XLSX = require('xlsx');
-const fs = require('fs');
 export const XLSXInput = (props) => {
     const handleFileChange = (e) => {
         if (e.target.files) {
@@ -58,7 +57,7 @@ export const XLSXProcessing = async (additiveData, units,reportFile) => {
         });
         let sheetName = workbook.SheetNames[0];
         let aoa = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], {header: 1, defval: ""});
-       
+        
         for (let i = 1; i < aoa.length; i++) {
             for (let k = 1; k < 8; k += 2) {
                 try {

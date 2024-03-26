@@ -1,35 +1,56 @@
-import logo from './logo2.svg';
 import './App.css';
-import AdditiveSettingsRender from "./AdditiveSettings";
-import React, {useState} from "react";
-import {additiveDataTemplate} from "./Templates";
-import {XLSXInput, XLSXProcessing} from "./XlsxLogic";
+import React, { useState } from "react";
+import Form from './Form';
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import Table from "./Table";
 
-let units = [];
-let outhtml;
-let additiveData;
-const userDataTemplate = {
-    userName: "Жидкова О.Ю.", sopCount: 0, isopCount: 0, ptCount: 0, fzCount: 0, botCount: 0
-}
-
-
-function App() {
-    const [additiveData, setAdditiveData] = useState(Object.assign({}, additiveDataTemplate));
+export default function App() {
     const [units, setUnits] = useState([]);
-    const [reportFile, setReportFile] = useState();
+    const [provizors, setProvizors] = useState([
+        {
+            name: "",
+            sopCount: 0,
+            isopCount: 0,
+            ptCount: 0,
+            fzCount: 0,
+            botCount: 0,
+        },
+        {
+            name: "",
+            sopCount: 0,
+            isopCount: 0,
+            ptCount: 0,
+            fzCount: 0,
+            botCount: 0,
+        },
+        {
+            name: "",
+            sopCount: 0,
+            isopCount: 0,
+            ptCount: 0,
+            fzCount: 0,
+            botCount: 0,
+        },
+    ]);
+    const [anotherData, setAnotherData] = useState({
+        sunlife: 0,
+        nathealth: 0,
+        byphasse: 0,
+        pamp: 0,
+        geling: 0,
+        mobiderm: 0,
+        to: 0,
+        check: 0,
+        pr8: 0,
+        pr11: 0,
+    });
+    
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <p>Продажи</p>
-                <XLSXInput units={units} setUnits={setUnits}/>
-                <p>Цільові звіт</p>
-                <input type={"file"} onChange={(files) => setReportFile(files.target.files[0])}></input>
-                <AdditiveSettingsRender additiveData={additiveData} setAdditiveData={setAdditiveData}/>
-                <button onClick={() => XLSXProcessing(additiveData, units, reportFile)}>Processing</button>
-            </header>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path='' element={<Form units={units} provizors={provizors} anotherData={anotherData} setUnits={setUnits} />} />
+                <Route path={"/zvit"} element={<Table units={units} provizors={provizors} anotherData={anotherData} />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
-
-export default App;
