@@ -14,6 +14,7 @@ export default function App() {
             ptCount: 0,
             fzCount: 0,
             botCount: 0,
+            packageCount:0
         },
         {
             name: "",
@@ -22,6 +23,7 @@ export default function App() {
             ptCount: 0,
             fzCount: 0,
             botCount: 0,
+            packageCount:0
         },
         {
             name: "",
@@ -30,6 +32,7 @@ export default function App() {
             ptCount: 0,
             fzCount: 0,
             botCount: 0,
+            packageCount:0
         },
     ]);
     const [anotherData, setAnotherData] = useState({
@@ -49,7 +52,7 @@ export default function App() {
         <BrowserRouter>
             <Routes>
                 <Route path='' element={<Form units={units} provizors={provizors} anotherData={anotherData} setUnits={setUnits} />} />
-                <Route path={"/zvit"} element={<Table units={units} provizors={provizors} anotherData={anotherData} />} />
+                <Route path={"/zvit"} element={<Table units={units} provizors={provizors} setProvizors ={setProvizors} anotherData={anotherData} />} />
             </Routes>
         </BrowserRouter>
     );

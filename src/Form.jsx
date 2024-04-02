@@ -29,13 +29,14 @@ export default function Form({ units, provizors, anotherData, setUnits }) {
                   id="name"
                   onChange={(event) =>
                     (provizors[0].name = event.target.value)
+
                   }>
-                  <option>Провизор</option>
-                  <option>Жидкова О. Ю.</option>
-                  <option>Осипова В. Ю.</option>
-                  <option>Князь Л. Т.</option>
-                  <option>Гетманова Л. С.</option>
-                  <option>Мякота В. А.</option>
+                 <option>Провизор</option>
+                  <option>Жидкова Ольга Юріївна</option>
+                  <option>Осіпова Валерія Юріївна</option>
+                  <option>Князь  Людмила Тихонівна</option>
+                  <option>Гетманова Лідія Сергіївна</option>
+                  <option>Мякота Владіслава Андріївна</option>
                 </select>
               </td>
               <td>
@@ -98,11 +99,11 @@ export default function Form({ units, provizors, anotherData, setUnits }) {
                     (provizors[1].name = event.target.value)
                   }>
                   <option>Провизор</option>
-                  <option>Жидкова О. Ю.</option>
-                  <option>Осипова В. Ю.</option>
-                  <option>Князь Л. Т.</option>
-                  <option>Гетманова Л. С.</option>
-                  <option>Мякота В. А.</option>
+                  <option>Жидкова Ольга Юріївна</option>
+                  <option>Осіпова Валерія Юріївна</option>
+                  <option>Князь  Людмила Тихонівна</option>
+                  <option>Гетманова Лідія Сергіївна</option>
+                  <option>Мякота Владіслава Андріївна</option>
                 </select>
               </td>
               <td>
@@ -164,12 +165,12 @@ export default function Form({ units, provizors, anotherData, setUnits }) {
                   onChange={(event) =>
                     (provizors[2].name = event.target.value)
                   }>
-                  <option>Провизор</option>
-                  <option>Жидкова О. Ю.</option>
-                  <option>Осипова В. Ю.</option>
-                  <option>Князь Л. Т.</option>
-                  <option>Гетманова Л. С.</option>
-                  <option>Мякота В. А.</option>
+                 <option>Провизор</option>
+                  <option>Жидкова Ольга Юріївна</option>
+                  <option>Осіпова Валерія Юріївна</option>
+                  <option>Князь  Людмила Тихонівна</option>
+                  <option>Гетманова Лідія Сергіївна</option>
+                  <option>Мякота Владіслава Андріївна</option>
                 </select>
               </td>
               <td>

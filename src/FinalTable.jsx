@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function FinalTable({ units, provizors, anotherData, setProvizorHetmanova }) {
+export default function FinalTable({ units, provizors, anotherData,setProvizors, setProvizorHetmanova }) {
   
   function zapolneniye(array) {
     const artCodes = document.querySelectorAll(".col__art-code");
@@ -8,25 +8,31 @@ export default function FinalTable({ units, provizors, anotherData, setProvizorH
   
     array.forEach((unit) => {
       const { code, count } = unit;
+
       const index = Array.from(artCodes).findIndex(
-        (element) => element.textContent === String(code)
+        (element) => element.textContent ===code.toString()
       );
-      if (index !== -1) {
+
+      /*if (index !== -1) {
         const coeficientElement = document.querySelector(`.col__coeficient[data-code="${code}"]`);
+
+        console.log(coeficientElement);
         if (coeficientElement) {
           const coeficient = parseInt(coeficientElement.textContent);
-          const soldCount = count / coeficient;
-          todayNumbers[index].textContent = soldCount;
+          const soldCount = Number(count) / coeficient;
+          todayNumbers[index].textContent = soldCount.toString();
           
           // Розподіл кількості проданих одиниць між провізорами
           setProvizorHetmanova(soldCount);
           // Отримання даних з інших провізорів та їхнє оновлення аналогічно
         }
-      }
+      }*/
     });
   }
   
   useEffect(() => {
+
+  
     zapolneniye(units);
   });
   return (

@@ -30,16 +30,23 @@ export const XLSXInput = (props) => {
         let tempUnits = [];
         for (let i = 1; i < data.length; i++) {
             let tempData = data[i];
+            let coefficient = getCoefficientFromSummary(tempData[1]);
             let unit = {
                 code: tempData[0],
                 name: tempData[1],
                 count: Number(tempData[2]),
-                sellerName: tempData[3]
+                sellerName: tempData[3],
+                packageCount: Number(tempData[2])/coefficient
             }
             tempUnits.push(unit);
 
         }
+        console.log(tempUnits);
         props.setUnits(tempUnits);
+    }
+    function getCoefficientFromSummary(summary){
+        const match = summary.match(/\((\d+)\)/);
+        return match ? Number(match[1]) : 1;
     }
     return(
         <input type="file" onChange={handleFileChange}/>);
