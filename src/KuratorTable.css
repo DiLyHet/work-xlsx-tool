@@ -1,21 +1,27 @@
-.backgroundRed{
+.backgroundRed {
     background-color: red;
 }
-.backgroundYellow{
+
+.backgroundYellow {
     background-color: yellow;
 }
-.backgroundGreen{
+
+.backgroundGreen {
     background-color: green;
 }
 
-.td {
-    border: 2px solid black;
-    width: 15px;
-    height: 5px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid #dddddd;
+    text-align: center;
 }
 
 .td1 {
-    border: 2px solid black;
-    width: 45px;
-    height: 5px;
+    font-weight: bold;
 }

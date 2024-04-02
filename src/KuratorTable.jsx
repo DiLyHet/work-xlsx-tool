@@ -1,20 +1,6 @@
 import React, {useEffect} from "react";
 import "./KuratorTable.css";
 export default function KuratorTable ({ units, provizors, anotherData }) {
-    console.log();
-
-        let sopElement = document.querySelectorAll(".sop");
-        console.log(sopElement);
-        sopElement.forEach(element =>{
-            if(sopElement.value>6){
-                element.classList.add("backgroundGreen");
-            }else if(sopElement.value === 0){
-                element.classList.add("backgroundRed");
-            }else{
-                element.classList.add("backgroundYellow");
-            }
-        });
-
 
     return(
        <table>
