@@ -18,7 +18,7 @@ export default function Table({
     const [provizorMyakota, setProvizorMyakota] = useState(0);
   return (
     <div>
-      <FinalTable
+      {/* <FinalTable
         units={units}
         provizors={provizors}
         anotherData={anotherData}
@@ -31,7 +31,7 @@ export default function Table({
         setProvizorMyakota={setProvizorMyakota}
       />
       <DarnitsaTable units={units} />
-      <FarmakTable units={units} />
+      <FarmakTable units={units} /> */}
       <KuratorTable
         units={units}
         provizors={provizors}

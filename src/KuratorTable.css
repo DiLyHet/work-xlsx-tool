@@ -1,0 +1,21 @@
+.td {
+    border: 2px solid black;
+    margin: auto;
+}
+
+.tdcenter {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.tdleft {
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.tdright {
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
