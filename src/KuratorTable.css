@@ -26,3 +26,8 @@ td {
 .td1 {
     font-weight: bold;
 }
+
+.buttonSet {
+    display: flex;
+    justify-content: end;
+}

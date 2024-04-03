@@ -16,6 +16,10 @@ export default function KuratorTable({ units, provizors, anotherData }) {
             <table>
                 <tbody>
                     <tr>
+                        <td className={'td'}>{`Дата: ${new Date()}`}</td>
+                        <td className={'td'}>Аптека: БОГОМОЛЬЦА</td>
+                    </tr>
+                    <tr>
                         <td className={'td1'}>Співробітник</td>
                         <td className={'td'}></td>
                         <td className={'td'}>ТОП 3</td>
@@ -128,9 +132,11 @@ export default function KuratorTable({ units, provizors, anotherData }) {
                     </tr>
                 </tbody>
             </table>
-            <button onClick={() => {
+            <button className='buttonSet' onClick={() => {
                 setPrioritet8(anotherData.pr8);
                 setPrioritet11(anotherData.pr11);
+                console.log(prioritet8);
+                console.log(prioritet11);
             }}>Сохранить данные приоритетов</button>
         </>
     );
