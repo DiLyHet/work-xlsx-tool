@@ -1,7 +1,13 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import "./KuratorTable.css";
 export default function KuratorTable ({ units, provizors, anotherData }) {
-
+    const[solenCount,setSolenCount] = useState(0);
+    useEffect(()=>{
+        let filteredUnits =units.filter(f=>f.code===658339);
+        if(filteredUnits.length>0){
+            setSolenCount(filteredUnits.reduce((total,current)=>total+Number(current.count),0));
+        }
+    });
     return(
        <table>
         <tbody>
@@ -113,7 +119,7 @@ export default function KuratorTable ({ units, provizors, anotherData }) {
                 <td className={'td1'}>Солен, уп</td>
 
                 <td className={'td'} style={
-                {  backgroundColor: units.filter(f=>f.code===658339)[0].count >= 1 ? 'green' : 'red' }}>{units.filter(f=>f.code===658339)[0].count}</td>
+                {  backgroundColor: solenCount >= 1 ? 'green' : 'red' }}>{solenCount}</td>
             </tr>
         </tbody>
        </table> 
