@@ -103,7 +103,7 @@ export default function Form({ units, provizors, anotherData, setUnits }) {
                   <option>Осіпова Валерія Юріївна</option>
                   <option>Князь  Людмила Тихонівна</option>
                   <option>Гетманова Лідія Сергіївна</option>
-                  <option>Мякота Владіслава Андріївна</option>
+                  <option>М'якота Владислава Андріївна</option>
                 </select>
               </td>
               <td>
@@ -170,7 +170,7 @@ export default function Form({ units, provizors, anotherData, setUnits }) {
                   <option>Осіпова Валерія Юріївна</option>
                   <option>Князь  Людмила Тихонівна</option>
                   <option>Гетманова Лідія Сергіївна</option>
-                  <option>Мякота Владіслава Андріївна</option>
+                  <option>М'якота Владислава Андріївна</option>
                 </select>
               </td>
               <td>

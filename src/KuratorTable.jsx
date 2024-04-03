@@ -84,15 +84,17 @@ export default function KuratorTable ({ units, provizors, anotherData }) {
             </tr>
             <tr>
                 <td className={'td1'}>% ПР 8:</td>
-                <td className={'td'}>{anotherData.pr8}</td>
                 <td className={'td'} style={
-                {  backgroundColor: anotherData.pr8 >= 3.66 ? 'green' : 'yellow'}}>{Number(anotherData.pr8) - Number(prioritet8)}</td>
+                {  backgroundColor: anotherData.pr8 >= 100 / 30 * Number(new Date().getDate()) ? 'green' : 'yellow'}}>{anotherData.pr8}</td>
+                <td className={'td'} style={
+                {  backgroundColor: (Number(anotherData.pr8) - Number(prioritet8)).toFixed(2) >= 3.66 ? 'green' : 'yellow'}}>{(Number(anotherData.pr8) - Number(prioritet8)).toFixed(2)}</td>
             </tr>
             <tr>
                 <td className={'td1'}>% ПР 11:</td>
-                <td className={'td'}>{anotherData.pr11}</td>
                 <td className={'td'} style={
-                {  backgroundColor: anotherData.pr11 >= 3.66 ? 'green' : 'yellow'}}>{Number(anotherData.pr11) - Number(prioritet11)}</td>
+                {  backgroundColor: anotherData.pr11 >= 100 / 30 * Number(new Date().getDate()) ? 'green' : 'yellow'}}>{anotherData.pr11}</td>
+                <td className={'td'} style={
+                {  backgroundColor: (Number(anotherData.pr11) - Number(prioritet11)).toFixed(2) >= 3.66 ? 'green' : 'yellow'}}>{(Number(anotherData.pr11) - Number(prioritet11)).toFixed(2)}</td>
             </tr>
             <tr>
                 <td className={'td1'}>% ТО:</td>
