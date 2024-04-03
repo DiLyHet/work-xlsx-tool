@@ -16,7 +16,7 @@ export default function KuratorTable({ units, provizors, anotherData }) {
             <table>
                 <tbody>
                     <tr>
-                        <td className={'td'}>{`Дата: ${new Date().getDate()}.${new Date().getMonth()+1}.${new Date().getFullYear()}`}</td>
+                        <td className={'td'}>{`Дата: ${(new Date().getDate()).padStart(2, '0')}.${(new Date().getMonth()+1).padStart(2, '0')}.${(new Date().getFullYear()).padStart(2, '0')}`}</td>
                         <td className={'td'}></td>
                         <td className={'td'}>Аптека: БОГОМОЛЬЦА</td>
                     </tr>
