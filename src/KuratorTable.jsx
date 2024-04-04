@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./KuratorTable.css";
 export default function KuratorTable({ units, provizors, anotherData }) {
     const [solenCount, setSolenCount] = useState(0);
-    const [prioritet8, setPrioritet8] = useState(6.7);
-    const [prioritet11, setPrioritet11] = useState(8.1);
+    const [prioritet8, setPrioritet8] = useState(10,8);
+    const [prioritet11, setPrioritet11] = useState(10,8);
 
     useEffect(() => {
         let filteredUnits = units.filter(f => f.code === 540709);
