@@ -34,7 +34,7 @@ export default function Form({ units, provizors, anotherData, setUnits }) {
                  <option>Провизор</option>
                   <option>Жидкова Ольга Юріївна</option>
                   <option>Осіпова Валерія Юріївна</option>
-                  <option>Князь  Людмила Тихонівна</option>
+                  <option>{'Князь'+' '+' '+'Людмила'+' '+'Тихонівна'}</option>
                   <option>Гетманова Лідія Сергіївна</option>
                   <option>М'якота Владислава Андріївна</option>
                 </select>
@@ -101,7 +101,7 @@ export default function Form({ units, provizors, anotherData, setUnits }) {
                   <option>Провизор</option>
                   <option>Жидкова Ольга Юріївна</option>
                   <option>Осіпова Валерія Юріївна</option>
-                  <option>Князь  Людмила Тихонівна</option>
+                  <option>{'Князь'+' '+' '+'Людмила'+' '+'Тихонівна'}</option>
                   <option>Гетманова Лідія Сергіївна</option>
                   <option>М'якота Владислава Андріївна</option>
                 </select>
@@ -168,7 +168,7 @@ export default function Form({ units, provizors, anotherData, setUnits }) {
                  <option>Провизор</option>
                   <option>Жидкова Ольга Юріївна</option>
                   <option>Осіпова Валерія Юріївна</option>
-                  <option>Князь  Людмила Тихонівна</option>
+                  <option>{'Князь'+' '+' '+'Людмила'+' '+'Тихонівна'}</option>
                   <option>Гетманова Лідія Сергіївна</option>
                   <option>М'якота Владислава Андріївна</option>
                 </select>
