@@ -3,7 +3,7 @@ import AdditiveSettingsRender from "./AdditiveSettings";
 
 import targetFile from "./dest.xlsx"
 const XLSX = require('xlsx');
-export const XLSXInput = (props) => {
+export const XLSXInput = ({setUnits}) => {
     const handleFileChange = (e) => {
         if (e.target.files) {
             let file = e.target.files[0];
@@ -41,8 +41,7 @@ export const XLSXInput = (props) => {
             tempUnits.push(unit);
 
         }
-        console.log(tempUnits);
-        props.setUnits(tempUnits);
+        setUnits(a => [...a, tempUnits])
     }
     function getCoefficientFromSummary(summary){
         const match = summary.match(/\((\d+)\)/);

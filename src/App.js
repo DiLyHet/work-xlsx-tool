@@ -51,7 +51,7 @@ export default function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='' element={<Form units={units} provizors={provizors} anotherData={anotherData} setUnits={setUnits} />} />
+                <Route path='' element={<Form unitsArray={units}  setUnitsArray={setUnits} />} />
                 <Route path={"/zvit"} element={<Table units={units} provizors={provizors} setProvizors ={setProvizors} anotherData={anotherData} />} />
             </Routes>
         </BrowserRouter>
