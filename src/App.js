@@ -35,24 +35,31 @@ export default function App() {
             packageCount:0
         },
     ]);
-    const [anotherData, setAnotherData] = useState({
-        sunlife: 0,
-        nathealth: 0,
-        byphasse: 0,
-        pamp: 0,
-        geling: 0,
-        mobiderm: 0,
-        to: 0,
-        check: 0,
-        pr8: 0,
-        pr11: 0,
+
+    const uniqueSellers = [];
+
+function findUniqueSellerNames(arrays) {
+    const uniqueNames = {};
+
+    arrays.forEach(innerArray => {
+        innerArray.forEach(obj => {
+            const sellerName = obj.sellerName;
+            uniqueNames[sellerName] = true;
+        });
     });
+    for (const name in uniqueNames) {
+        uniqueSellers.push(name);
+    }
+
+    console.log(uniqueSellers);
+    return uniqueSellers;
+}
     
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='' element={<Form unitsArray={units}  setUnitsArray={setUnits} />} />
-                <Route path={"/zvit"} element={<Table units={units} provizors={provizors} setProvizors ={setProvizors} anotherData={anotherData} />} />
+                <Route path='' element={<Form unitsArray={units} setUnitsArray={setUnits} findUniqueSellerNames={findUniqueSellerNames} />} />
+                <Route path={"/zvit"} element={<Table units={units} uniqueSellers={uniqueSellers} />} />
             </Routes>
         </BrowserRouter>
     );

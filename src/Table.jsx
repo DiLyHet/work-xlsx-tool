@@ -11,6 +11,7 @@ export default function Table({
   anotherData,
   setArtCodes,
   setTodayNumbers,
+  uniqueSellers
 }) {
     const [provizorHetmanova, setProvizorHetmanova] = useState(0);
     const [provizorZhidkova, setProvizorZhidkova] = useState(0);
@@ -37,14 +38,7 @@ export default function Table({
       {/*<FarmakTable units={units} />*/}
       <KuratorTable
         units={units}
-        provizors={provizors}
-        setProvizors={setProvizors}
-        anotherData={anotherData}
-        provizorHetmanova={provizorHetmanova}
-        provizorZhidkova={provizorZhidkova}
-        provizorOsipova={provizorOsipova}
-        provizorKnyaz={provizorKnyaz}
-        provizorMyakota={provizorMyakota}
+        uniqueSellers={uniqueSellers}
       />
     </div>
   );
