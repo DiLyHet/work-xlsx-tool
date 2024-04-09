@@ -12,18 +12,18 @@ code {
     monospace;
 }
 
-*{
+/* *{
   background-color: #1b2631;
-}
+} */
 
-.page {
+/* .page {
   display: flex;
   flex-direction: column;
   background-color: #1b2631;
   align-items: center;
-}
+} 
 
-/* .button {
+.button {
   text-decoration: none;
   display: inline-block;
   margin: 10px 20px;
@@ -57,11 +57,7 @@ code {
   border-color: #f1c40f;
   width: calc(100% - 10px);
   height: calc(100% + 10px);
-} */
-
-.button {
-  border: 2px solid #f1c40f;
-}
+} 
 
 
 .text {
@@ -87,4 +83,4 @@ code {
   align-items: center;
   width: 100vw;
   height: 15vh;
-}
+}  */
