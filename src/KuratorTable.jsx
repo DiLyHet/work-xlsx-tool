@@ -58,33 +58,25 @@ useEffect(() => {
 //   );
 
 return (
-    <table>
+    <div className="table__container">
+    <table className="table">
         <tbody>
-            <tr>
-                <td className="text">ФИО</td>
-                <td className="text">Целевые</td>
-                <td className="text">Приоритет 8</td>
-                <td className="text">Приоритет 11</td>
+          <tr>
+            <th className="text header-text">ФИО</th>
+            <th className="text header-text">Целевые</th>
+            <th className="text header-text">Приоритет 8</th>
+            <th className="text header-text">Приоритет 11</th>
+          </tr>
+          {uniqueSellers.map((seller, index) => (
+            <tr key={index}>
+              <td className="text">{seller}</td>
+              <td className="text">{(units[0].filter(element => element.sellerName.trim() === seller.trim()).reduce((accum, current) => (accum += current.packageCount), 0)).toFixed(1)}</td>
+              <td className="text">{(units[1].filter(element => element.sellerName.trim() === seller.trim()).reduce((accum, current) => (accum += current.packageCount), 0)).toFixed(1)}</td>
+              <td className="text">{(units[2].filter(element => element.sellerName.trim() === seller.trim()).reduce((accum, current) => (accum += current.packageCount), 0)).toFixed(1)}</td>
             </tr>
-            <tr>
-                <td className="text">{uniqueSellers[0]}</td>
-                <td className="text">{(units[0].filter(element=>element.sellerName.trim() === uniqueSellers[0].trim()).reduce((accum,current)=>(accum+=current.packageCount),0).toFixed(1))}</td>
-                <td className="text">{(units[1].filter(element=>element.sellerName.trim() === uniqueSellers[0].trim()).reduce((accum,current)=>(accum+=current.packageCount),0)).toFixed(1)}</td>
-                <td className="text">{(units[2].filter(element=>element.sellerName.trim() === uniqueSellers[0].trim()).reduce((accum,current)=>(accum+=current.packageCount),0)).toFixed(1)}</td>
-            </tr>
-            <tr>
-                <td className="text">{uniqueSellers[1]}</td>
-                <td className="text">{(units[0].filter(element=>element.sellerName.trim() === uniqueSellers[1].trim()).reduce((accum,current)=>(accum+=current.packageCount),0)).toFixed(1)}</td>
-                <td className="text">{(units[1].filter(element=>element.sellerName.trim() === uniqueSellers[1].trim()).reduce((accum,current)=>(accum+=current.packageCount),0)).toFixed(1)}</td>
-                <td className="text">{(units[2].filter(element=>element.sellerName.trim() === uniqueSellers[1].trim()).reduce((accum,current)=>(accum+=current.packageCount),0)).toFixed(1)}</td>
-            </tr>
-            <tr>
-                <td className="text">{uniqueSellers[2]}</td>
-                <td className="text">{(units[0].filter(element=>element.sellerName.trim() === uniqueSellers[2].trim()).reduce((accum,current)=>(accum+=current.packageCount),0)).toFixed(1)}</td>
-                <td className="text">{(units[1].filter(element=>element.sellerName.trim() === uniqueSellers[2].trim()).reduce((accum,current)=>(accum+=current.packageCount),0)).toFixed(1)}</td>
-                <td className="text">{(units[2].filter(element=>element.sellerName.trim() === uniqueSellers[2].trim()).reduce((accum,current)=>(accum+=current.packageCount),0)).toFixed(1)}</td>
-            </tr>
+          ))}
         </tbody>
-    </table>
+      </table>
+      </div>
 );
 }
